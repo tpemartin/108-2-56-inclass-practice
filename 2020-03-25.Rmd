@@ -72,7 +72,54 @@ char2<-c('你好')
 ```{r}
 HeSaid <- "他說：\"今天多了一個確診。\""
 ```
+
 ```{r}
-HeSaid <- '他說："今天多了一個確診。"'
+HeSaid <- 
+  '他說："今天多了一個確診。"'
+```
+
+```{r}
+char1Vector<-c(
+  "你好",
+  "How are you?"
+  )
+```
+
+### Atomic
+
+```{r}
+complexVector <- c("小明今年歲數", "15")
+```
+
+
+```{r}
+library(httr)
+library(dplyr)
+GET("https://api.github.com/repos/tpemartin/108-2-56-inclass-practice/commits") %>%
+  content() %>%
+  View()
+```
+
+```{r}
+library(googlesheets4)
+`出席狀況表單網址` <-  https://docs.google.com/spreadsheets/d/1EAG49qDKPWWi0ebkVr29TLrvVnoBPfkvxYY-J3xLAHY/edit#gid=458686645 # 缺乏定義值
+ss <- as_sheets_id(`出席狀況表單網址`)
+homework_sheet <- sheets_read(ss,sheet=1)
+```
+
+```{r}
+library(googlesheets4)
+`出席狀況表單網址` <- 'ss' # 缺乏定義值
+'ss' <-  ("https://docs.google.com/spreadsheets/d/1EAG49qDKPWWi0ebkVr29TLrvVnoBPfkvxYY-J3xLAHY/edit#gid=458686645")
+homework_sheet <- sheets_read(ss,sheet=1)
+```
+
+```{r}
+library(googlesheets4)
+`https://docs.google.com/spreadsheets/d/1EAG49qDKPWWi0ebkVr29TLrvVnoBPfkvxYY-J3xLAHY/edit#gid=458686645` <-
+  "https://docs.google.com/spreadsheets/d/1EAG49qDKPWWi0ebkVr29TLrvVnoBPfkvxYY-J3xLAHY/edit#gid=458686645"
+`出席狀況表單網址` <- `https://docs.google.com/spreadsheets/d/1EAG49qDKPWWi0ebkVr29TLrvVnoBPfkvxYY-J3xLAHY/edit#gid=458686645` # 缺乏定義值
+ss <- as_sheets_id(`出席狀況表單網址`)
+homework_sheet <- sheets_read(ss,sheet=1)
 ```
 
