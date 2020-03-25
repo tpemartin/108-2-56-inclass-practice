@@ -4,3 +4,29 @@ author: "林茂廷"
 date: "3/25/2020"
 output: html_document
 ---
+
+## Atomic vector
+
+```{r}
+num1 <- 5
+vNum1 <- c(2,5)
+vNum2 <- c(2, num1)
+# 右邊num1是在call num1, 會得到5，相當於
+vNum2 <- c(2,5)
+```
+
+Stacking vectors
+```{r}
+vNum1 <- c(-1,5)
+vNum2 <- c(2,3)
+vNum3 <- c(vNum1,vNum2)
+vNum4 <- c(-1,5,2,3)
+vNum5 <- c(c(-1,5),c(2,3))
+```
+
+```{r}
+vNumComplex <- c(c(1,3,c(-5,23)))
+vNumComplexNotComplesAtAll <-
+  c(1,3,-5,23)
+```
+
